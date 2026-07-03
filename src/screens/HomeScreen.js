@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, ActivityIndicator, SafeAreaView, Platform, ScrollView, KeyboardAvoidingView, Image } from 'react-native';
-import { getCategories } from '../api';
 
 export default function HomeScreen({ navigation }) {
   const [reference, setReference] = useState('');

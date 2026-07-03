@@ -1,9 +1,10 @@
 import { Platform } from 'react-native';
 
-const API_BASE = Platform.OS === 'android' 
+const DEFAULT_API_BASE = Platform.OS === 'android' 
   ? 'http://10.0.2.2:5000/api' 
   : 'http://localhost:5000/api'; // Works for web and iOS
-// For physical device, replace with your local IP: http://192.168.x.x:5000/api
+
+const API_BASE = process.env.EXPO_PUBLIC_API_URL || DEFAULT_API_BASE;
 
 export async function lookupFine(referenceNumber, categoryCode) {
   const res = await fetch(`${API_BASE}/fines/lookup?ref=${encodeURIComponent(referenceNumber)}&category=${encodeURIComponent(categoryCode)}`);
