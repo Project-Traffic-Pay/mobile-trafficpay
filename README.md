@@ -1,5 +1,7 @@
 # TrafficPay Mobile
 
+![TrafficPay Illustration](./assets/illustration.png)
+
 Mobile app for looking up Sri Lanka traffic fines, paying pending fines, and viewing an e-receipt.
 
 This project is built with Expo + React Native and uses a simple backend API for fine lookup and payment processing.
